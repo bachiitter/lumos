@@ -7,17 +7,20 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "start": "vite preview",
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
     "check": "biome check .",
     "fix": "biome check . --write",
     "format": "biome format . --write",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.2",
     "@cloudflare/workers-types": "^4.20240919.0",
+    "@tanstack/router-devtools": "^1.58.3",
     "@tanstack/router-plugin": "^1.58.4",
+    "@total-typescript/tsconfig": "^1.0.4",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -26,12 +29,11 @@
     "wrangler": "^3.78.7"
   },
   "dependencies": {
-    "@biomejs/biome": "^1.9.2",
     "@tanstack/react-router": "^1.58.3",
-    "@tanstack/router-devtools": "^1.58.3",
-    "@total-typescript/tsconfig": "^1.0.4",
+    "@tanstack/start": "^1.58.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "vinxi": "^0.4.3"
   },
   "trustedDependencies": ["@biomejs/biome", "esbuild", "workerd"]
 }
