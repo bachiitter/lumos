@@ -3,24 +3,35 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "dev": "vite --port=3001",
+    "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "start": "vite"
+    "start": "vite preview",
+    "check": "biome check .",
+    "fix": "biome check . --write",
+    "format": "biome format . --write",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@cloudflare/workers-types": "^4.20240919.0",
     "@tanstack/router-plugin": "^1.58.4",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.4"
+    "typescript": "^5.6.2",
+    "vite": "^5.4.7",
+    "wrangler": "^3.78.7"
   },
   "dependencies": {
+    "@biomejs/biome": "^1.9.2",
     "@tanstack/react-router": "^1.58.3",
     "@tanstack/router-devtools": "^1.58.3",
+    "@total-typescript/tsconfig": "^1.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  }
+  },
+  "trustedDependencies": ["@biomejs/biome", "esbuild", "workerd"]
 }
